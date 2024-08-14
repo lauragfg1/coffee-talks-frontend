@@ -1,0 +1,43 @@
+.new-meeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1400px;
+    background-color: #ffffff;
+}
+
+.new-meeting h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.new-meeting .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topic {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.new-meeting .form > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.new-meeting .next {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+

@@ -1,0 +1,17 @@
+.BlueButton {
+    background-color: #192B37;
+    border: none;
+    color: white;
+    padding: 25px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 23px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.BlueButton:hover {
+    background-color: #14222D;
+}

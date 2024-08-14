@@ -1,0 +1,27 @@
+.germanLevel {
+    font-family: Arial, sans-serif;
+}
+
+.germanLevel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.germanLevel label {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.germanLevel p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.germanLevel label{
+    font-size: 16px;
+}
+.germanLevel input[type="radio"] {
+    accent-color: #FF5640;
+    margin-right: 8px;
+}

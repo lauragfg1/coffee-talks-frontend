@@ -1,0 +1,58 @@
+.Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 20000px;
+    background-color: #ffffff;
+}
+
+.headerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+}
+
+.headerSection h1 {
+    margin: 0;
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+.headerSection Button {
+    margin-top: 30px;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+}
+
+.participationSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.participationSection p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.languageSection p {
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.languageSection select {
+    padding: 10px;
+    font-size: 15px;
+}

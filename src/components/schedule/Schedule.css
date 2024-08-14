@@ -1,0 +1,15 @@
+select {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.25rem;
+    background-color: #fff;
+    appearance: none;
+    cursor: pointer;
+}
+
+option {
+    padding: 10px;
+    font-size: 1rem;
+}

@@ -1,0 +1,41 @@
+.calendarwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1400px;
+    background-color: #ffffff;
+
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.Calendar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-content: center;
+}
+
+.next {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
