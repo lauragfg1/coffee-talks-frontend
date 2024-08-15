@@ -2,35 +2,81 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 2000px;
-    margin: 0 auto;
-    padding: 100px;
+    max-width: 1400px;
+    max-height: 800vh;
     background-color: #ffffff;
+    gap: 50px;
 }
 
-.header {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 70px;
-}
-
-.header h1 {
+.confirm-wrapper h1 {
     font-size: 24px;
     color: #333;
-    margin-bottom: 20px;
 }
 
-.header p {
-    font-size: 18px;
-    color: #666;
-    margin: 5px 0;
-}
-
-.next {
-    position: fixed;
-    bottom: 100px;
-    right: 100px;
-    width: auto;
+.content {
     display: flex;
-    justify-content: flex-end;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+    gap: 300px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.topic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.conversation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.large-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.small-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.small-button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
 }

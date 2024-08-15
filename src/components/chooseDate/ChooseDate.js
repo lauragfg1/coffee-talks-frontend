@@ -22,7 +22,12 @@ function ChooseDate() {
     };
 
     const handleClick = () => {
-        navigate('/confirm', { state: { date: selectedDate?.toString(), time: selectedTime, topic: topic } });
+        if (selectedDate && selectedTime && topic) {
+            console.log("Passing topic to ConfirmTalk:", topic);
+            navigate('/confirm', { state: { date: selectedDate?.toString(), time: selectedTime, topic} });
+        } else {
+            console.error("Date, time, or topic not selected");
+        }
     };
 
     return (

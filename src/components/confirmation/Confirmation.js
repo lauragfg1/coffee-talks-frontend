@@ -1,4 +1,3 @@
-import react from 'react';
 import Button from "../button/Button";
 import BlueButton from "../blueButton/BlueButton";
 import {useNavigate} from "react-router-dom";

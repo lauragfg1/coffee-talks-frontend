@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function TopicList() {
+function TopicList({ selectedTopic, setSelectedTopic }) {
     const [topics, setTopics] = useState([]);
 
     useEffect(() => {
@@ -20,10 +20,19 @@ function TopicList() {
             .catch(error => console.error('Error fetching topics:', error));
     }, []);
 
+    const handleChange = (event) => {
+        const topicId = event.target.value;
+        console.log("Selected topic ID:", topicId);
+        setSelectedTopic(topicId);
+    };
+
     return (
-        <select>
+        <select value={selectedTopic} onChange={handleChange}>
+            <option value="">Select a topic</option>
             {topics.map(topic => (
-                <option key={topic.id} value={topic.id}>{topic.name}</option>
+                <option key={topic.id} value={topic.name}>
+                    {topic.name}
+                </option>
             ))}
         </select>
     );

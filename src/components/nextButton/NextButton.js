@@ -1,7 +1,7 @@
 import React from 'react';
 import './NextButton.css';
 
-function nextButton({ onClick}) {
+function NextButton({ onClick}) {
     return (
         <button className="nextButton" onClick={onClick}>
             Next
@@ -9,4 +9,4 @@ function nextButton({ onClick}) {
     );
 }
 
-export default nextButton;
+export default NextButton;

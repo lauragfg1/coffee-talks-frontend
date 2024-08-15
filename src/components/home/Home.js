@@ -18,7 +18,6 @@ function Home() {
         navigate('/talks');
     }
 
-
     return (
         <div className="Home">
                 <div className="headerSection">

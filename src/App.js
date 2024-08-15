@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Home from './components/home/Home';
-import ChooseDate from './components/chooseDate/ChooseDate';
-import ConfirmTalk from './components/confirmTalk/ConfirmTalk';
-import NewMeeting from "./components/newMeeting/NewMeeting";
-import Talks from "./components/talks/Talks";
-import Login from "./components/login/Login";
-import Confirmation from "./components/confirmation/Confirmation";
+
 import './App.css';
+import Home from "./components/home/Home";
+import NewMeeting from "./components/newMeeting/NewMeeting";
+import ChooseDate from "./components/chooseDate/ChooseDate";
+import ConfirmTalk from "./components/confirmTalk/ConfirmTalk";
+import Login from "./components/login/Login";
+import Talks from "./components/talks/Talks";
+import Confirmation from "./components/confirmation/Confirmation";
 
 function App() {
 
