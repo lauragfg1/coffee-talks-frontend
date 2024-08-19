@@ -11,7 +11,7 @@ import Button from "../button/Button";
 
 function ConfirmTalk() {
     const location = useLocation();
-    const { date, time, topic } = location.state || {};
+    const { date, time, topic, user } = location.state || {};
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -26,11 +26,14 @@ function ConfirmTalk() {
 
                 <div className="user">
                     <img src={userImage} alt="User Icon" className="small-icon"/>
-                    <p>Your conversation partner is</p>
+                    <div className="conversation">
+                        {user && <p className="large-text">{user}</p>}
+                        <p>will be your conversation partner</p>
+                    </div>
                 </div>
 
                 <div className="time">
-                    <img src={calendarImage} alt="Calendar Icon" className="small-icon"/>
+                <img src={calendarImage} alt="Calendar Icon" className="small-icon"/>
                     <div className="date">
                         {date && <p> {new Date(date).toLocaleDateString()}</p>}
                         {time && <p>{time}h</p>}

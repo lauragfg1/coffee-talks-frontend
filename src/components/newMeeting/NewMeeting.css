@@ -20,6 +20,14 @@
     align-items: center;
 }
 
+.users {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
 .topic {
     width: 100%;
     display: flex;

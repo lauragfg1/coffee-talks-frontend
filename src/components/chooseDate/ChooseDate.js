@@ -11,6 +11,7 @@ function ChooseDate() {
     const [selectedTime, setSelectedTime] = useState(null);
     const location = useLocation();
     const { topic } = location.state || {};
+    const { user } = location.state || {};
     const navigate = useNavigate();
 
     const handleDateChange = (date) => {
@@ -24,7 +25,7 @@ function ChooseDate() {
     const handleClick = () => {
         if (selectedDate && selectedTime && topic) {
             console.log("Passing topic to ConfirmTalk:", topic);
-            navigate('/confirm', { state: { date: selectedDate?.toString(), time: selectedTime, topic} });
+            navigate('/confirm', { state: { date: selectedDate?.toString(), time: selectedTime, topic, user} });
         } else {
             console.error("Date, time, or topic not selected");
         }

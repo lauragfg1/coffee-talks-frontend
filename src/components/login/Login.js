@@ -13,9 +13,9 @@ function Login() {
 
     return (
         <div className="Login">
-                <h1>Welcome!</h1>
-                <p>In order to continue, you will need to log in using your Endava Account</p>
-                <Button onClick={handleClick}>Log in</Button>
+            <h1>Welcome!</h1>
+            <p>In order to continue, you will need to log in using your Endava Account</p>
+            <Button onClick={handleClick}>Log in</Button>
         </div>
     );
 }
