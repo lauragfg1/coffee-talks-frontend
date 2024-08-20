@@ -27,7 +27,7 @@ function NewMeeting() {
             <div className="form">
                 <h1>Who do you want to have your Coffee Talk with?</h1>
                 <div className={"users"}>
-                    <AutocompleteUserInput setSelectedUser={setSelectedUser} />
+                    <AutocompleteUserInput selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
                     <RandomUserButton setSelectedUser={setSelectedUser} />
                 </div>
                 <h1>What would you like to talk about?</h1>

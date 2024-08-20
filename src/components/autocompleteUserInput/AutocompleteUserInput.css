@@ -45,7 +45,11 @@
     transition: background-color 0.3s;
 }
 
-.autocomplete-container ul li:hover,
+
+.autocomplete-container ul li:hover {
+    background-color: #f9f9f9;
+}
+
 .autocomplete-container ul li.active {
     background-color: #ffffff;
 }

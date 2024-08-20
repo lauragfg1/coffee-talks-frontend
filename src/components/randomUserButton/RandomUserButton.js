@@ -24,7 +24,8 @@ function RandomUserButton({ setSelectedUser }) {
     const handleRandom = () => {
         if (users.length > 0) {
             const randomUser = users[Math.floor(Math.random() * users.length)];
-            setSelectedUser(randomUser.name);
+            setSelectedUser(`${randomUser.name} ${randomUser.surname}`);
+            console.log("Selected User:", `${randomUser.name} ${randomUser.surname}`);
         }
     };
 

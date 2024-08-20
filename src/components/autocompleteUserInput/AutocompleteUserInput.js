@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './AutocompleteUserInput.css';
 
-function AutocompleteUserInput({ setSelectedUser }) {
+function AutocompleteUserInput({ selectedUser, setSelectedUser }) {
     const [users, setUsers] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
@@ -25,10 +25,10 @@ function AutocompleteUserInput({ setSelectedUser }) {
     }, []);
 
     useEffect(() => {
-        if (setSelectedUser) {
-            setInputValue(setSelectedUser);
+        if (selectedUser) {
+            setInputValue(selectedUser);
         }
-    }, [setSelectedUser]);
+    }, [selectedUser]);
 
     const handleChange = (event) => {
         const value = event.target.value;
