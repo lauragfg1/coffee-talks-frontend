@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Button from '../button/Button';
+import React from 'react';
+import Button from "../button/Button";
 
 function RandomTopicButton({ setSelectedTopic }) {
-    const [topics, setTopics] = useState([]);
-
-    useEffect(() => {
+    const handleRandomTopic = () => {
         fetch("http://localhost:8080/topic/getAll", {
             headers: {
                 'Content-Type': 'application/json',
@@ -17,20 +15,15 @@ function RandomTopicButton({ setSelectedTopic }) {
                 }
                 return response.json();
             })
-            .then(data => setTopics(data))
+            .then(data => {
+                const randomTopic = data[Math.floor(Math.random() * data.length)];
+                setSelectedTopic(randomTopic);
+            })
             .catch(error => console.error('Error fetching topics:', error));
-    }, []);
-
-    const handleRandom = () => {
-        if (topics.length > 0) {
-            const randomTopic = topics[Math.floor(Math.random() * topics.length)];
-            setSelectedTopic(randomTopic.name);
-            console.log("Selected Topic:", randomTopic.name);
-        }
     };
 
     return (
-        <Button onClick={handleRandom}>Random</Button>
+        <Button onClick={handleRandomTopic}>Random</Button>
     );
 }
 

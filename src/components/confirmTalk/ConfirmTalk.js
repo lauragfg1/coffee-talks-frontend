@@ -15,7 +15,7 @@ function ConfirmTalk() {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/confirmation');
+        navigate('/confirmation', { state: {topic}});
     };
 
     return (
@@ -44,7 +44,7 @@ function ConfirmTalk() {
                     <img src={commentImage} alt="User Icon" className="small-icon"/>
                     <div className="conversation">
                         <p>Your conversation will be about </p>
-                        {topic && <p className="large-text">{topic}</p>}
+                        {topic && <p className="large-text">{topic.name}</p>}
                     </div>
                 </div>
 

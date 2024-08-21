@@ -9,6 +9,7 @@ import ConfirmTalk from "./components/confirmTalk/ConfirmTalk";
 import Login from "./components/login/Login";
 import Talks from "./components/talks/Talks";
 import Confirmation from "./components/confirmation/Confirmation";
+import Question from "./components/question/Question";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/talks" element={<Talks />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/confirmation" element={<Confirmation />} />
+                    <Route path="/question" element={<Question />} />
                 </Routes>
             </div>
         </Router>

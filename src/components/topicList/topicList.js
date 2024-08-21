@@ -22,19 +22,21 @@ function TopicList({ selectedTopic, setSelectedTopic }) {
 
     const handleChange = (event) => {
         const topicId = event.target.value;
-        console.log("Selected topic ID:", topicId);
-        setSelectedTopic(topicId);
+        const selected = topics.find(topic => topic.id === parseInt(topicId));
+        setSelectedTopic(selected);
     };
 
     return (
-        <select value={selectedTopic} onChange={handleChange}>
-            <option value="">Select a topic</option>
-            {topics.map(topic => (
-                <option key={topic.id} value={topic.name}>
-                    {topic.name}
-                </option>
-            ))}
-        </select>
+        <div className="autocomplete-container">
+            <select value={selectedTopic.id || ''} onChange={handleChange}>
+                <option value="">Select a topic</option>
+                {topics.map(topic => (
+                    <option key={topic.id} value={topic.id}>
+                        {topic.name}
+                    </option>
+                ))}
+            </select>
+        </div>
     );
 }
 

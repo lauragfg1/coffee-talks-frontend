@@ -1,18 +1,25 @@
 import Button from "../button/Button";
 import BlueButton from "../blueButton/BlueButton";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 function Confirmation() {
 
+    const location = useLocation();
     const navigate = useNavigate();
+    const { topic } = location.state || {};
 
     const handleClick = () => {
         navigate('/home');
     }
+
+    const handleClick2 = () => {
+        navigate('/question', { state: { topic } });
+    }
+
     return(
         <div>
             <h1>Thank you for scheduling a Coffee Talk!</h1>
-            <Button>I want some inspiration</Button>
+            <Button onClick={handleClick2}>I want some inspiration</Button>
             <BlueButton onClick={handleClick}>I will check it later</BlueButton>
         </div>
 

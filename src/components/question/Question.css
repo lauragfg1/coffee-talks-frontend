@@ -1,0 +1,34 @@
+.next-button, .back-button {
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.next-button:hover, .back-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+.slide-out {
+    animation: slideOut 1s ease-in-out;
+}

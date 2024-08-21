@@ -1,4 +1,3 @@
-// frontend/src/components/chooseDate/ChooseDate.js
 import React, { useState } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 import NextButton from "../nextButton/NextButton";

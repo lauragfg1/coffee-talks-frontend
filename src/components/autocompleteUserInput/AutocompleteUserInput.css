@@ -1,9 +1,11 @@
 .autocomplete-container {
     position: relative;
-    width: 100%;
-    max-width: 200px;
     margin: 20px auto;
     font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .autocomplete-container input[type="text"] {
@@ -44,7 +46,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 
 .autocomplete-container ul li:hover {
     background-color: #f9f9f9;

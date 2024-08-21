@@ -10,10 +10,10 @@ import RandomTopicButton from "../randomTopicButton/RandomTopicButton";
 function NewMeeting() {
     const navigate = useNavigate();
     const [selectedUser, setSelectedUser] = useState('');
-    const [selectedTopic, setSelectedTopic] = useState('');
+    const [selectedTopic, setSelectedTopic] = useState({});
 
     const handleClick = () => {
-        if (selectedTopic) {
+        if (selectedTopic && selectedTopic.id) {
             console.log("Selected Topic:", selectedTopic);
             console.log("Selected User:", selectedUser);
             navigate('/choose-date', { state: { topic: selectedTopic, user: selectedUser } });
@@ -26,7 +26,7 @@ function NewMeeting() {
         <div className="new-meeting">
             <div className="form">
                 <h1>Who do you want to have your Coffee Talk with?</h1>
-                <div className={"users"}>
+                <div className="users">
                     <AutocompleteUserInput selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
                     <RandomUserButton setSelectedUser={setSelectedUser} />
                 </div>
