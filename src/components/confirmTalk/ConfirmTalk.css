@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     height: 60vh;
-    width: 80vw;
+    width: 95vw;
     background-color: rgba(240, 240, 240, 0.9);
     border-radius: 10px;
     padding: 40px;
@@ -21,7 +21,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 50px;
-    gap: 220px;
+    gap: 200px;
 }
 
 .user {
