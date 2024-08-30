@@ -12,34 +12,10 @@ function ConfirmTalk() {
     const { date, time, topic, user } = location.state || {};
     const navigate = useNavigate();
 
-    /*
+
     const handleClick = async () => {
         navigate('/confirmation', { state: { topic } });
     }
-
-    */
-    const handleClick = async () => {
-        try {
-            const response = await fetch("http://localhost:8080/talks/create", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
-                },
-                body: JSON.stringify({ date, time, topicName: topic.name, userName: user })
-            });
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            const data = await response.json();
-            console.log('New talk created:', data);
-            navigate('/confirmation', { state: { topic } });
-        } catch (error) {
-            console.error('Error creating talk:', error);
-        }
-    };
 
     return (
         <div className="confirm-wrapper2">
