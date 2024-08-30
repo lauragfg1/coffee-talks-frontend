@@ -23,7 +23,7 @@
 
 .autocomplete-container ul {
     position: absolute;
-    width: 100%;
+    width: 95%;
     top: 100%;
     max-height: 200px;
     overflow-y: auto;
