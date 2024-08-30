@@ -5,7 +5,7 @@ function RandomUserButton({ setSelectedUser }) {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/user/getAll", {
+        fetch("http://localhost:8080/user/getParticipants", {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -24,8 +24,8 @@ function RandomUserButton({ setSelectedUser }) {
     const handleRandom = () => {
         if (users.length > 0) {
             const randomUser = users[Math.floor(Math.random() * users.length)];
-            setSelectedUser(`${randomUser.name} ${randomUser.surname}`);
-            console.log("Selected User:", `${randomUser.name} ${randomUser.surname}`);
+            setSelectedUser(`${randomUser.name}`);
+            console.log("Selected User:", `${randomUser.name}`);
         }
     };
 

@@ -1,9 +1,8 @@
-.autocomplete-container {
+.autocomplete-container2 {
     position: relative;
-    margin: 20px auto;
+    margin: 5px auto;
     font-family: Arial, sans-serif;
     width: 100%;
-    max-width: 200px;
     padding: 10px;
-    box-sizing: border-box;
+    height: 200%;
 }

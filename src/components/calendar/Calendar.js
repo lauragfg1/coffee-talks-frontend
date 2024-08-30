@@ -82,7 +82,7 @@ const Calendar = ({ onDateChange }) => {
     }, [currMonth, currYear, selectedDay]);
 
     return (
-        <div className="wrapper">
+        <div className="cal-wrapper">
             <header>
                 <p className="current-date">{monthYear}</p>
                 <div className="icons">

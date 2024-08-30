@@ -27,7 +27,7 @@ function TopicList({ selectedTopic, setSelectedTopic }) {
     };
 
     return (
-        <div className="autocomplete-container">
+        <div className="autocomplete-container2">
             <select value={selectedTopic.id || ''} onChange={handleChange}>
                 <option value="">Select a topic</option>
                 {topics.map(topic => (

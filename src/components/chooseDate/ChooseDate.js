@@ -4,6 +4,7 @@ import NextButton from "../nextButton/NextButton";
 import './ChooseDate.css';
 import Calendar from "../calendar/Calendar";
 import Schedule from "../schedule/Schedule";
+import StaticBackground from "../staticBackground/StaticBackground";
 
 function ChooseDate() {
     const [selectedDate, setSelectedDate] = useState(null);
@@ -32,6 +33,7 @@ function ChooseDate() {
 
     return (
         <div className="calendarwrapper">
+            <StaticBackground/>
             <div className="header">
                 <h1>When do you want to have your next Coffee Talk?</h1>
                 <p>All talks will have a duration of 30 minutes.</p>

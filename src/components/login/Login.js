@@ -1,15 +1,11 @@
 import './Login.css';
 import React from "react";
 import Button from "../button/Button";
-import { useNavigate } from 'react-router-dom';
 
 function Login() {
-    const navigate = useNavigate();
-
     const handleClick = () => {
-        navigate('/home');
+        window.location.href = "http://localhost:8080/user/loginAndRedirect";
     }
-
 
     return (
         <div className="Login">

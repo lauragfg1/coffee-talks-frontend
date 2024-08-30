@@ -8,7 +8,7 @@ function AutocompleteUserInput({ selectedUser, setSelectedUser }) {
     const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
 
     useEffect(() => {
-        fetch("http://localhost:8080/user/getAll", {
+        fetch("http://localhost:8080/user/getParticipants", {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -36,7 +36,7 @@ function AutocompleteUserInput({ selectedUser, setSelectedUser }) {
         setActiveSuggestionIndex(0);
         if (value) {
             const filteredSuggestions = users.filter(user =>
-                `${user.name} ${user.surname}`.toLowerCase().includes(value.toLowerCase())
+                `${user.name}`.toLowerCase().includes(value.toLowerCase())
             );
             setSuggestions(filteredSuggestions);
         } else {
@@ -45,8 +45,8 @@ function AutocompleteUserInput({ selectedUser, setSelectedUser }) {
     };
 
     const handleSelect = (user) => {
-        setInputValue(`${user.name} ${user.surname}`);
-        setSelectedUser(`${user.name} ${user.surname}`);
+        setInputValue(`${user.name}`);
+        setSelectedUser(`${user.name}`);
         setSuggestions([]);
     };
 
@@ -81,7 +81,7 @@ function AutocompleteUserInput({ selectedUser, setSelectedUser }) {
                             onClick={() => handleSelect(user)}
                             className={index === activeSuggestionIndex ? 'active' : ''}
                         >
-                            {user.name} {user.surname}
+                            {user.name}
                         </li>
                     ))}
                 </ul>

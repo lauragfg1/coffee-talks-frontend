@@ -6,6 +6,7 @@ import TopicList from "../topicList/topicList";
 import RandomUserButton from "../randomUserButton/RandomUserButton";
 import AutocompleteUserInput from "../autocompleteUserInput/AutocompleteUserInput";
 import RandomTopicButton from "../randomTopicButton/RandomTopicButton";
+import StaticBackground from "../staticBackground/StaticBackground";
 
 function NewMeeting() {
     const navigate = useNavigate();
@@ -24,6 +25,7 @@ function NewMeeting() {
 
     return (
         <div className="new-meeting">
+            <StaticBackground/>
             <div className="form">
                 <h1>Who do you want to have your Coffee Talk with?</h1>
                 <div className="users">
